@@ -1,19 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Counter() {
+export default function Counter() {
+  const [count, setCount] = useState(0)
+  function addNum() {
+    setCount(count + 1)
+    document.body.style.backgroundColor = '#FFF0F5'
+  }
+  function resetNum() {
+    setCount(0)
+    document.body.style.backgroundColor = '#FFFFFF'
+  }
+  function minusNum() {
+    setCount(count - 1)
+    document.body.style.backgroundColor = '#F0FFF0'
+  }
   return (
     <>
       <div>
         <h2>Counter</h2>
-        <p>0</p>
+        <p>{count}</p>
         <div className="btn_container">
-          <button className="inc">INCREASE</button>
-          <button className="res">RESET</button>
-          <button className="dec">DECREASE</button>
+          <button onClick={addNum} className="inc">
+            INCREASE
+          </button>
+          <button onClick={resetNum} className="res">
+            RESET
+          </button>
+          <button onClick={minusNum} className="dec">
+            DECREASE
+          </button>
         </div>
       </div>
     </>
   )
 }
-
-export default Counter

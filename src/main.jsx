@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Tailwind from './ex_tailwind/Tailwind'
+import Navbar from './ex_tailwind/components/Navbar'
 // import App from "./App.jsx";
 // import "./index.css";
 // import Counter from './Counter'
@@ -8,6 +8,7 @@ import Tailwind from './ex_tailwind/Tailwind'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <Counter /> */}
-    <Tailwind />
+    {/* <Tailwind /> */}
+    <Navbar />
   </React.StrictMode>,
 )

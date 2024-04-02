@@ -22,10 +22,14 @@ const Navbar = () => {
         <BsSearch size={20} />
         <BsPerson size={20} />
       </div>
+      {/* Hamburger */}
       <div>
         <HiOutlineMenuAlt4 size={20} />
       </div>
-      <div>
+
+      {/* Mobile menu dropdown */}
+
+      <div className="absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col">
         <ul>
           <h1>BEACHES.</h1>
           <li>Home</li>
@@ -37,7 +41,7 @@ const Navbar = () => {
             <button>Search</button>
             <button>Account</button>
           </div>
-          <div>
+          <div className="">
             <FaFacebook className="icon" />
             <FaTwitter className="icon" />
             <FaYoutube className="icon" />

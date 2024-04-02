@@ -1,6 +1,9 @@
 import React from 'react'
 import { BsPerson } from 'react-icons/bs'
 import { BsSearch } from 'react-icons/bs'
+import { AiOutlineClose } from 'react-icons/ai'
+import { HiOutlineMenuAlt4 } from 'react-icons/hi'
+import { FaFacebook, FaTwitter, FaYoutube, FaPinterest, FaInstagram } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
@@ -16,8 +19,32 @@ const Navbar = () => {
         <li>Book</li>
       </ul>
       <div className="hidden md:block/flex/">
-        <BsSearch />
-        <BsPerson />
+        <BsSearch size={20} />
+        <BsPerson size={20} />
+      </div>
+      <div>
+        <HiOutlineMenuAlt4 size={20} />
+      </div>
+      <div>
+        <ul>
+          <h1>BEACHES.</h1>
+          <li>Home</li>
+          <li>Destination</li>
+          <li>Travel</li>
+          <li>View</li>
+          <li>Book</li>
+          <div>
+            <button>Search</button>
+            <button>Account</button>
+          </div>
+          <div>
+            <FaFacebook className="icon" />
+            <FaTwitter className="icon" />
+            <FaYoutube className="icon" />
+            <FaPinterest className="icon" />
+            <FaInstagram className="icon" />
+          </div>
+        </ul>
       </div>
     </div>
   )

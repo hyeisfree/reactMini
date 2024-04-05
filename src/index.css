@@ -30,6 +30,6 @@
   }
 
   button {
-    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(----primary-light)];
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(----primary-light)] text-white rounded-md;
   }
 }

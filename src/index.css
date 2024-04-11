@@ -35,7 +35,6 @@
 
   button {
     @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(----primary-light)] text-white rounded-md;
-    /* 여기부터 수정하기 영상 26분부터 */
   }
   .icon {
     @apply text-2xl cursor-pointer;

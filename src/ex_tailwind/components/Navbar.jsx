@@ -37,7 +37,8 @@ const Navbar = () => {
           <li>Travel</li>
           <li>View</li>
           <li>Book</li>
-          <div>
+          <div className="flex flex-col">
+            {/* 24분부터 수정하기.. 12일 무조건 완성 */}
             <button>Search</button>
             <button>Account</button>
           </div>

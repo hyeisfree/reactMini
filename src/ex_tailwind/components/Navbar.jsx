@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsPerson } from 'react-icons/bs'
 import { BsSearch } from 'react-icons/bs'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -6,6 +6,11 @@ import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { FaFacebook, FaTwitter, FaYoutube, FaPinterest, FaInstagram } from 'react-icons/fa'
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false)
+  const handleNav = () => {
+    setNav(!nav)
+  }
+
   return (
     <div className="flex justify-between items-center h-20 px-4">
       <div>
@@ -23,26 +28,26 @@ const Navbar = () => {
         <BsPerson size={20} />
       </div>
       {/* Hamburger */}
-      <div>
+      <div onClick={handleNav} className="md:hidden">
+        nav ? <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20} />
         <HiOutlineMenuAlt4 size={20} />
       </div>
 
       {/* Mobile menu dropdown */}
 
-      <div className="absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col">
+      <div className="{nav ? }">
         <ul>
           <h1>BEACHES.</h1>
-          <li>Home</li>
-          <li>Destination</li>
-          <li>Travel</li>
-          <li>View</li>
-          <li>Book</li>
+          <li className="border-b">Home</li>
+          <li className="border-b">Destination</li>
+          <li className="border-b">Travel</li>
+          <li className="border-b">View</li>
+          <li className="border-b">Book</li>
           <div className="flex flex-col">
-            {/* 24분부터 수정하기. */}
-            <button>Search</button>
+            <button className="my-6">Search</button>
             <button>Account</button>
           </div>
-          <div className="">
+          <div className="flex justify-between my-6">
             <FaFacebook className="icon" />
             <FaTwitter className="icon" />
             <FaYoutube className="icon" />
